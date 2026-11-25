@@ -2,16 +2,33 @@
 <html lang="zh-HK">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- 原有嘅 Favicon (保持不變) -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤️</text></svg>"
     />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>天氣儀表盤</title>
     <meta name="description" content="即時天氣 · 風速預報 · 官方警告" />
-    <meta name="theme-color" content="#42a5f5" />
-    <script type="module" crossorigin src="/weather-private/assets/index-bwjt2SB_.js"></script>
-    <link rel="stylesheet" crossorigin href="/weather-private/assets/index-BEWxxL6_.css">
+    
+    <!-- ================= PWA 設定開始 ================= -->
+    <!-- 1. 連結至 manifest 檔案 -->
+    <link rel="manifest" href="/weather-private/manifest.json" />
+    
+    <!-- 2. 更改狀態欄顏色 (配合你嘅 slate-950 深色背景) -->
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- 3. iOS (Safari) 專用設定 -->
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="天氣儀表盤" />
+    <!-- ================= PWA 設定結束 ================= -->
+    
+    <script type="module" crossorigin src="/weather-private/assets/index-C_2ja-GR.js"></script>
+    <link rel="stylesheet" crossorigin href="/weather-private/assets/index-MIars8bX.css">
   </head>
   <body>
     <div id="root"></div>
