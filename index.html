@@ -3,34 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     
-    <!-- 🌟 換成真正嘅圖片 Favicon (請確保 favicon.png 喺 public 資料夾) -->
-    <link rel="icon" type="image/png" href="./favicon.png" />
+    <!-- 🌟 強制瀏覽器唔好 Cache HTML 頁面，每次打開都攞最新 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- 🌟 換成真正嘅圖片 Favicon (請確保 favicon.png 喺同一個資料夾) -->
+    <link rel="icon" type="image/png" href="/weather/assets/favicon-BAFpyJqU.png" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- 🌟 修改網頁標題 -->
-    <title>Ken's Priavte Weather</title>
+    <title>Ken's Weather</title>
     
     <meta name="description" content="即時天氣 · 風速預報 · 官方警告" />
     
-    <!-- ================= PWA 設定開始 ================= -->
-    <!-- 1. 連結至 manifest 檔案 (改為相對路徑) -->
+    <!-- PWA 相關設定 -->
     <link rel="manifest" href="./manifest.json" />
-    
-    <!-- 2. 更改狀態欄顏色 -->
     <meta name="theme-color" content="#0f172a" />
-    
-    <!-- 3. iOS (Safari) 專用設定 (改為相對路徑) -->
     <link rel="apple-touch-icon" href="./icon-192.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Ken's Weather" />
-    <!-- ================= PWA 設定結束 ================= -->
-    
-    <script type="module" crossorigin src="/weather-private/assets/index-guQLqJkw.js"></script>
-    <link rel="stylesheet" crossorigin href="/weather-private/assets/index-DRY6wMcf.css">
+    <script type="module" crossorigin src="/weather/assets/index-BC19JXQI.js"></script>
+    <link rel="stylesheet" crossorigin href="/weather/assets/index-Ls-NYMSj.css">
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- ⚠️ 注意：如果呢個係 build 完嘅 dist/index.html，下面呢句應該會自動變成類似 -->
+    <!-- <script type="module" crossorigin src="./assets/index-xxxxxx.js"></script> -->
+    <!-- 如果你手動改咗，請確保呢句仍然指向正確嘅 build 檔案！ -->
   </body>
 </html>
